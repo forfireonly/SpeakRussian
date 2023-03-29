@@ -1,0 +1,18 @@
+<resources>
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">88dp</dimen>
+
+    <!-- Default screen margins, per android design guidelines-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="text_size">24dp</dimen>
+    <dimen name="divider_thickness">2dp</dimen>
+
+    <!-- Size of circle in colors -->
+    <dimen name="circle_diameter">55dp</dimen>
+
+    <!--Length of sky -->
+    <dimen name="sky_length">100dp</dimen>
+
+</resources>

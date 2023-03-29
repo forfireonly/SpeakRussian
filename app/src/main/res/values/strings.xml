@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Speak Russian</string>
+
+    <!-- names of categories-->
+    <string name="category_numbers">Numbers</string>
+    <string name="category_colors">Colors</string>
+    <string name="category_inside">Inside</string>
+    <string name="category_outside">Outside</string>
+    <string name="category_phrases">Phrases</string>
+
+
+    <!-- numbers -->
+    <string name="one">One/Odin</string>
+    <string name="two">Two/Dva</string>
+    <string name="three">Three/Tree</string>
+    <string name="four">Four/Chetyry</string>
+    <string name="five">Five/Pyat</string>
+    <string name="six">Six/Shest</string>
+    <string name="seven">Seven/Sem</string>
+    <string name="eight">Eight/Vosem</string>
+    <string name="nine">Nine/Devyat</string>
+    <string name="ten">Ten/Desyat</string>
+
+    <!-- colors -->
+    <string name="red">Red/Krasniy</string>
+    <string name="blue">Blue/Seeniy</string>
+    <string name="yellow">Yellow/Zhyolti</string>
+    <string name="green">Green/Zeleniyy</string>
+    <string name="orange">Orange/Aranzheviy</string>
+    <string name="purple">Purple/Feealyetaviy</string>
+    <string name="pink">Pink/Rozaviy</string>
+    <string name="brown">Brown/Kareechneviy</string>
+    <string name="white">White/Byeli</string>
+    <string name="black">Black/Chyorniy</string>
+
+    <!-- inside -->
+    <string name="room">Room/Komnata</string>
+    <string name="kitchen">Kitchen/Kukhnya</string>
+    <string name="bathroom">Bathroom/Vannaya</string>
+    <string name="bed">Bed/Krovat</string>
+    <string name="couch">Couch/Divan</string>
+    <string name="tv">TV/Televizor</string>
+    <string name="table">Table/Stol</string>
+    <string name="chair">Chair/Stul</string>
+    <string name="window">Window/Okno</string>
+    <string name="door">Door/Dver</string>
+
+    <!-- outside -->
+    <string name="yard">Yard/Dvor</string>
+    <string name="grass">Grass/Trava</string>
+    <string name="tree">Tree/Derevo</string>
+    <string name="sky">Sky/Nebo</string>
+    <string name="clouds">Clouds/Oblaka</string>
+    <string name="warm">Warm/Teplo</string>
+    <string name="cold">Cold/Kholodno</string>
+    <string name="hot">Hot/Zharko</string>
+    <string name="rain">Rain/Dozhd</string>
+    <string name="snow">Snow/Sneg</string>
+
+    <!-- communication -->
+    <string name="yes">Yes/Da</string>
+    <string name="no">No/Net</string>
+    <string name="eat">Eat/Kushay</string>
+    <string name="letsgo">Let\'s go/Poydem</string>
+    <string name="comehere">Come here/Idi syuda</string>
+    <string name="howareyoudoing">How are you doing/Kak dela</string>
+    <string name="good">Good/Khorosho</string>
+    <string name="lets">Let\'s/Davay</string>
+    <string name="itstime">It\'s time/Pora</string>
+    <string name="thankyou">Thank you/Spasibo</string>
+
+
+</resources>

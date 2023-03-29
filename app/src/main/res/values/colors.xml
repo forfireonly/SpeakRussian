@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+
+    <!--colors used in app-->
+    <color name="white">#FFFFFFFF</color>
+    <color name="categories_background">#c1c1c1</color>
+    <color name="numbers_background">#eb3542</color>
+    <color name="colors_background">#2e6875</color>
+    <color name="inside_background">#e6bb5c</color>
+    <color name="outside_background">#a1000d</color>
+    <color name="communication_background">#67b29f</color>
+    <color name="numbers_background2">#ff5c67</color>
+
+
+    <!-- colors for circle -->
+    <color name="red_circle">#be0000</color>
+    <color name="blue_circle">#0000ff</color>
+    <color name="yellow_circle">#ffff00</color>
+    <color name="green_circle">#00cc00</color>
+    <color name="orange_circle">#ff9000</color>
+    <color name="purple_circle">#800080</color>
+    <color name="pink_circle">#ff77aa</color>
+    <color name="brown_circle">#a5492a</color>
+
+    <color name="sky">#71bce1</color>
+
+</resources>
