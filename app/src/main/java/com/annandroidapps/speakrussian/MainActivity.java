@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,48 +14,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView numbersView = findViewById(R.id.numbers);
-        numbersView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Numbers.class);
-                startActivity(i);
-            }
+        numbersView.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, Numbers.class);
+            startActivity(i);
         });
 
         TextView colorsView = findViewById(R.id.colors);
-        colorsView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Colors.class);
-                startActivity(i);
-            }
+        colorsView.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, Colors.class);
+            startActivity(i);
         });
 
         TextView insideView = findViewById(R.id.inside);
-        insideView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Inside.class);
-                startActivity(i);
-            }
+        insideView.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, Inside.class);
+            startActivity(i);
         });
 
         TextView outsideView = findViewById(R.id.outside);
-        outsideView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Outside.class);
-                startActivity(i);
-            }
+        outsideView.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, Outside.class);
+            startActivity(i);
         });
 
         TextView phrasesView = findViewById(R.id.phrases);
-        phrasesView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Communication.class);
-                startActivity(i);
-            }
+        phrasesView.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, Communication.class);
+            startActivity(i);
         });
     }
 }
