@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Your privacy is important for us andwe are committed to protecting it. Kindly take a few minutes to go through Start with Russian app's privacy policy & term of use.
+Your privacy is important for us and we are committed to protecting it. Kindly take a few minutes to go through Start with Russian app's privacy policy & term of use.
 
 Anna Scott built Start with Russian app as a Free app. This SERVICE is provided by Anna Scott at no cost and is intended for use as is. 
 
