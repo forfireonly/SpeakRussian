@@ -42,6 +42,7 @@ public class Numbers extends AppCompatActivity {
         setContentView(R.layout.words_list);
 
         Toolbar myToolBar = findViewById(R.id.toolbar);
+
         setSupportActionBar(myToolBar);
         ActionBar actionBar= getSupportActionBar();
 
