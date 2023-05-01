@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Speak Russian</string>
+    <string name="app_name">Start with Russian</string>
 
     <!-- names of categories-->
     <string name="category_numbers">Numbers</string>
