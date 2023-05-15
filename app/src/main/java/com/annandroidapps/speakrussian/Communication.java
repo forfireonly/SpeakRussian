@@ -62,7 +62,7 @@ public class Communication extends AppCompatActivity {
         ActionBar myActionBar = getSupportActionBar();
 
         assert myActionBar != null;
-        myActionBar.setHomeAsUpIndicator(R.drawable.cathedral);
+        myActionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
         myActionBar.setDisplayHomeAsUpEnabled(true);
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);

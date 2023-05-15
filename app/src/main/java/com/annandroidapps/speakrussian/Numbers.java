@@ -47,7 +47,7 @@ public class Numbers extends AppCompatActivity {
         ActionBar actionBar= getSupportActionBar();
 
         assert actionBar != null;
-        actionBar.setHomeAsUpIndicator(R.drawable.cathedral);
+        actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -68,7 +68,7 @@ public class Numbers extends AppCompatActivity {
 
         WordAdapter itemsAdapter = new WordAdapter(this, numbersArray);
         ListView listView = findViewById(R.id.list);
-        listView.setBackgroundColor(getResources().getColor(R.color.numbers_background2));
+        listView.setBackgroundColor(getResources().getColor(R.color.numbers_background));
 
         listView.setAdapter(itemsAdapter);
 

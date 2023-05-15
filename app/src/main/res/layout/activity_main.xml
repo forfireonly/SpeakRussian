@@ -13,7 +13,7 @@
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:text="@string/category_numbers"
-        android:background="@color/numbers_background2"
+        android:background="@color/numbers_background"
 
         />
 

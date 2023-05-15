@@ -50,7 +50,7 @@ public class Outside extends AppCompatActivity {
         ActionBar actionBar= getSupportActionBar();
 
         assert actionBar != null;
-        actionBar.setHomeAsUpIndicator(R.drawable.cathedral);
+        actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);

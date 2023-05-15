@@ -3,6 +3,7 @@ package com.annandroidapps.speakrussian;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
@@ -61,9 +62,8 @@ public class Colors extends AppCompatActivity {
         ActionBar actionBar= getSupportActionBar();
 
         assert actionBar != null;
-        actionBar.setHomeAsUpIndicator(R.drawable.cathedral);
+        actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
         actionBar.setDisplayHomeAsUpEnabled(true);
-
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
