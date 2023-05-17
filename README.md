@@ -6,3 +6,5 @@ Simple, intuitive, and seamless experience to start learning Russian language.
 3. Native speaker accent.
 ## How to install:
 [![](https://github.com/forfireonly/SpeakRussian/blob/master/256x256.png)](https://play.google.com/store/apps/details?id=com.annandroidapps.speakrussian)
+
+[![](https://github.com/forfireonly/SpeakRussian/blob/master/get_from_github.png)]
