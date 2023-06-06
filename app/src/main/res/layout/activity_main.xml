@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/numbers_background"
+        android:foreground="?android:attr/selectableItemBackground"
         android:orientation="horizontal">
 
         <TextView
@@ -35,7 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colors_background"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/colors"
@@ -58,7 +60,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/inside_background"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/inside"
@@ -81,7 +84,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/outside_background"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/outside"
@@ -104,7 +108,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/communication_background"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/phrases"
