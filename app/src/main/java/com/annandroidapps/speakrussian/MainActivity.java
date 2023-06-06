@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,31 +13,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView numbersView = findViewById(R.id.numbers);
+        View numbersView = findViewById(R.id.numbers_layout);
         numbersView.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, Numbers.class);
             startActivity(i);
         });
 
-        TextView colorsView = findViewById(R.id.colors);
+        View colorsView = findViewById(R.id.colors_layout);
         colorsView.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, Colors.class);
             startActivity(i);
         });
 
-        TextView insideView = findViewById(R.id.inside);
+        View insideView = findViewById(R.id.inside_layout);
         insideView.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, Inside.class);
             startActivity(i);
         });
 
-        TextView outsideView = findViewById(R.id.outside);
+        View outsideView = findViewById(R.id.outside_layout);
         outsideView.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, Outside.class);
             startActivity(i);
         });
 
-        TextView phrasesView = findViewById(R.id.phrases);
+        View phrasesView = findViewById(R.id.phrases_layout);
         phrasesView.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, Communication.class);
             startActivity(i);

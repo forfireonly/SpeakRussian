@@ -20,7 +20,6 @@ public class Word {
         mAudio = audio;
 
     }
-
     public String getmWord() {
         return mWord;
     }

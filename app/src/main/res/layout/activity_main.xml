@@ -1,50 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/categories_background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/numbers"
-        style="@style/CategoryStyle"
-        android:text="@string/category_numbers"
+    <LinearLayout
+        android:id="@+id/numbers_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/numbers_background"
+        android:orientation="horizontal">
 
-        />
+        <TextView
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="@string/category_numbers" />
 
-    <TextView
-        android:id="@+id/colors"
-        style="@style/CategoryStyle"
-        android:text="@string/category_colors"
+        <ImageView
+            android:contentDescription="@string/play"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/play_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id='@+id/colors_layout'
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colors_background"
-        />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/inside"
-        style="@style/CategoryStyle"
-        android:text="@string/category_inside"
+        <TextView
+            android:id="@+id/colors"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="@string/category_colors" />
+
+        <ImageView
+            android:contentDescription="@string/play"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/play_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inside_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/inside_background"
-        />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/outside"
-        style="@style/CategoryStyle"
-        android:text="@string/category_outside"
+        <TextView
+            android:id="@+id/inside"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="@string/category_inside" />
+
+        <ImageView
+            android:contentDescription="@string/play"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/play_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outside_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/outside_background"
-        />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/phrases"
-        style="@style/CategoryStyle"
-        android:text="@string/category_phrases"
+        <TextView
+            android:id="@+id/outside"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="@string/category_outside" />
+
+        <ImageView
+            android:contentDescription="@string/play"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/play_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phrases_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/communication_background"
+        android:orientation="horizontal">
 
-        />
+        <TextView
+            android:id="@+id/phrases"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:text="@string/category_phrases" />
+
+        <ImageView
+            android:contentDescription="@string/play"
+            style="@style/CategoryStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/play_arrow" />
+    </LinearLayout>
 
 
 </LinearLayout>

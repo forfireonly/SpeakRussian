@@ -68,6 +68,8 @@
     <string name="lets">Let\'s/Davay</string>
     <string name="itstime">It\'s time/Pora</string>
     <string name="thankyou">Thank you/Spasibo</string>
+    <string name="picture_of_a_number">Picture of a number</string>
+    <string name="play">Play</string>
 
 
 </resources>
