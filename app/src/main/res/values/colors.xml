@@ -12,16 +12,21 @@
     <color name="categories_background">#c1c1c1</color>
     <color name="colors_background">#2e6875</color>
     <color name="inside_background">#775812</color>
-    <color name="outside_background">#a1000d</color>
+    <color name="outside_background">#81000a</color>
     <color name="communication_background">#0f4153</color>
-    <color name="numbers_background">#cc4a52</color>
+    <color name="numbers_background">#8f3439</color>
     <color name="category_name">#5e0008</color>
+    <color name="sky">#71bce1</color>
 
+    <!--<color name="outside_background">#a1000d</color>-->
     <!--colors that were used in app-->
     <color name="inside_background_01">#e6bb5c</color>
     <color name="outside_background_01">#a1000d</color>
     <color name="communication_background_01">#67b29f</color>
     <color name="numbers_background_01">#eb3542</color>
+    <!--<color name="outside_background">#a1000d</color>-->
+    <!-- <color name="numbers_background">#cc4a52</color> -->
+    <!--<color name="outside_background">#a1000d</color> -->
 
     <!-- colors for circle -->
     <color name="red_circle">#be0000</color>
@@ -33,6 +38,6 @@
     <color name="pink_circle">#ff77aa</color>
     <color name="brown_circle">#a5492a</color>
 
-    <color name="sky">#71bce1</color>
+
 
 </resources>

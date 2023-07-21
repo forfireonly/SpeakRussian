@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,14 +11,9 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/black"
         android:elevation="4dp"
-        android:textSize="@dimen/text_size"
-
-
-        />
-
+        android:textSize="@dimen/text_size"/>
 
     <ListView
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_below="@+id/toolbar"
         android:id="@+id/list"
         android:layout_width="match_parent"

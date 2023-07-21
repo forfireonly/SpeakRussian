@@ -13,3 +13,5 @@
    </style>
 
 </resources>
+<!--attributes used in the past-->
+<!--<item name="android:padding">@dimen/activity_padding</item>-->

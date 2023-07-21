@@ -21,6 +21,8 @@ public class Outside extends AppCompatActivity {
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
 
+    private int focus;
+
     //we need on completion listener to release our media player
 
     private final MediaPlayer.OnCompletionListener mOncompletitionListener = mediaPlayer -> releaseMediaPlayer();
@@ -55,6 +57,14 @@ public class Outside extends AppCompatActivity {
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
+        focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+        if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+            mMediaPlayer = MediaPlayer.create(Outside.this, R.raw.outside);
+            mMediaPlayer.start();
+            mMediaPlayer.setOnCompletionListener(mOncompletitionListener);
+        }
+
         ArrayList<Word> outsideArray = new ArrayList<>();
 
         outsideArray.add(new Word(getString(R.string.yard), R.drawable.yard, R.raw.yard));
@@ -77,7 +87,7 @@ public class Outside extends AppCompatActivity {
         listView.setOnItemClickListener((adapterView, view, position, l) -> {
             releaseMediaPlayer();
             Word word = outsideArray.get(position);
-            int focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
             if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                 mMediaPlayer = MediaPlayer.create(Outside.this, word.getmAudio() );

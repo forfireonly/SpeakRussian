@@ -11,6 +11,7 @@
         android:contentDescription="@string/picture_of_a_number"
         android:id="@+id/image"
         style="@style/CategoryStyle"
+        android:scaleType="centerCrop"
         android:layout_width="0dp"
         android:layout_weight="1"
         />

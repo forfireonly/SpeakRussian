@@ -2,12 +2,18 @@
     <string name="app_name">Start with Russian</string>
 
     <!-- names of categories-->
-    <string name="category_numbers">Numbers</string>
-    <string name="category_colors">Colors</string>
-    <string name="category_inside">Inside</string>
-    <string name="category_outside">Outside</string>
-    <string name="category_phrases">Phrases</string>
+    <string name="category_numbers">Numbers/Tsifry</string>
+    <string name="category_colors">Colors/Tsveta</string>
+    <string name="category_inside">Inside/Vnutri</string>
+    <string name="category_outside">Outside/Snaruzhi</string>
+    <string name="category_phrases">Phrases/Frases</string>
+    <string name="category_animals">Animals/Zhivotnye</string>
+    <string name="category_food">Food/Eda</string>
+    <string name="category_travel">Travel/Puteshestviya</string>
 
+    <!-- descriptions -->
+    <string name="picture_of_a_number">Picture of a number</string>
+    <string name="play">Play</string>
 
     <!-- numbers -->
     <string name="one">One/Odin</string>
@@ -30,7 +36,7 @@
     <string name="purple">Purple/Feealyetaviy</string>
     <string name="pink">Pink/Rozaviy</string>
     <string name="brown">Brown/Kareechneviy</string>
-    <string name="white">White/Byeli</string>
+    <string name="white">White/Belyy</string>
     <string name="black">Black/Chyorniy</string>
 
     <!-- inside -->
@@ -68,8 +74,46 @@
     <string name="lets">Let\'s/Davay</string>
     <string name="itstime">It\'s time/Pora</string>
     <string name="thankyou">Thank you/Spasibo</string>
-    <string name="picture_of_a_number">Picture of a number</string>
-    <string name="play">Play</string>
+
+    <!-- animals -->
+    <string name="dog">Dog/Sobaka</string>
+    <string name="cat">Cat/Kot</string>
+    <string name="chicken">Chicken/Kuritsa</string>
+    <string name="fish">Fish/Ryba</string>
+    <string name="deer">Deer/Olen</string>
+    <string name="lion">Lion/lev</string>
+    <string name="bear">Bear/Medved</string>
+    <string name="elk">Elk/Los</string>
+    <string name="elephant">Elephant/Slon</string>
+    <string name="dinosaur">Dinosaur/Dinozavr</string>
+
+    <!-- food -->
+    <string name="breakfast">Breakfast/Zavtrak</string>
+    <string name="lunch">Lunch/Obed</string>
+    <string name="dinner">Dinner/Uzhin</string>
+    <string name="cheese">Cheese/Syr</string>
+    <string name="sausage">Sausage/Kolbasa</string>
+    <string name="egg">Egg/Yaytso</string>
+    <string name="tomato">Tomato/Pomidor</string>
+    <string name="avocado">Avocado/Avacado</string>
+    <string name="chips">Chips/Chipsy</string>
+    <string name="grapes">Grapes/Vinograd</string>
+
+    <!--travel -->
+    <string name="car">Car/Mashina</string>
+    <string name="train">Train/Poezd</string>
+    <string name="plane">Plane/Samolet</string>
+    <string name="bus">Bus/Avtobus</string>
+    <string name="road">Road/Doroga</string>
+    <string name="ticket">Ticket/Bilet</string>
+    <string name="luggage">Luggage/Bagazh</string>
+    <string name="city">City/Gorod</string>
+    <string name="hotel">Hotel/Gostinitsa</string>
+    <string name="museum">Museum/Muzey</string>
+
+
+
+
 
 
 </resources>

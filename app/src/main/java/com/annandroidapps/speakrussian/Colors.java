@@ -21,6 +21,8 @@ public class Colors extends AppCompatActivity {
 
     private AudioManager mAudioManager;
 
+    private int focus;
+
     private final MediaPlayer.OnCompletionListener mCompletitionListener = mediaPlayer -> releaseMediaPlayer();
 
     private final AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
@@ -67,6 +69,14 @@ public class Colors extends AppCompatActivity {
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
+        focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+        if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+            mMediaPlayer = MediaPlayer.create(Colors.this, R.raw.colors);
+            mMediaPlayer.start();
+            mMediaPlayer.setOnCompletionListener(mCompletitionListener);
+        }
+
         ArrayList<Word> colorsArray = new ArrayList<>();
 
         colorsArray.add(new Word(getString(R.string.red), R.drawable.circle_red, R.raw.red));
@@ -91,7 +101,7 @@ public class Colors extends AppCompatActivity {
 
             Word word = colorsArray.get(position);
 
-            int focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
             if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                 mMediaPlayer = MediaPlayer.create(Colors.this, word.getmAudio());

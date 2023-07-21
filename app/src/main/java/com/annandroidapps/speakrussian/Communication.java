@@ -20,6 +20,8 @@ public class Communication extends AppCompatActivity {
 
     private AudioManager mAudioManager;
 
+    private int focus;
+
     private final MediaPlayer.OnCompletionListener onCompletionListener = mediaPlayer -> releaseMediaPlayer();
 
     private final AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
@@ -67,6 +69,14 @@ public class Communication extends AppCompatActivity {
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
+        focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+        if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+            mMediaPlayer = MediaPlayer.create(Communication.this, R.raw.phrases);
+            mMediaPlayer.start();
+            mMediaPlayer.setOnCompletionListener(onCompletionListener);
+        }
+
         ArrayList<Word> communicationArray = new ArrayList<>();
 
         communicationArray.add(new Word(getString(R.string.yes), R.raw.yes));
@@ -90,7 +100,7 @@ public class Communication extends AppCompatActivity {
             releaseMediaPlayer();
             Word word = communicationArray.get(position);
 
-            int focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
             if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                 mMediaPlayer = MediaPlayer.create(Communication.this, word.getmAudio());

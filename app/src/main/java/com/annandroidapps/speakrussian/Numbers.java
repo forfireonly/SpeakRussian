@@ -12,12 +12,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ListView;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Numbers extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
 
     private AudioManager mAudioManager;
+
+    private int focus;
 
     private final MediaPlayer.OnCompletionListener mCompletitionListener = mediaPlayer -> releaseMediaPlayer();
 
@@ -44,13 +47,29 @@ public class Numbers extends AppCompatActivity {
         Toolbar myToolBar = findViewById(R.id.toolbar);
 
         setSupportActionBar(myToolBar);
-        ActionBar actionBar= getSupportActionBar();
+        /*ActionBar actionBar = getSupportActionBar();
 
         assert actionBar != null;
         actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);*/
+
+        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.cathedralblue);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+       /* getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.cathedralblue);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
+        focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+        if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+            mMediaPlayer = MediaPlayer.create(Numbers.this, R.raw.numbers);
+            mMediaPlayer.start();
+            mMediaPlayer.setOnCompletionListener(mCompletitionListener);
+        }
 
         ArrayList<Word> numbersArray = new ArrayList<>();
 
@@ -73,10 +92,11 @@ public class Numbers extends AppCompatActivity {
         listView.setAdapter(itemsAdapter);
 
         listView.setOnItemClickListener((adapterView, view, position, l) -> {
+
             releaseMediaPlayer();
             Word word = numbersArray.get(position);
 
-            int focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+            focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
             if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                 mMediaPlayer = MediaPlayer.create(Numbers.this, word.getmAudio());
@@ -84,7 +104,6 @@ public class Numbers extends AppCompatActivity {
                 mMediaPlayer.setOnCompletionListener(mCompletitionListener);
             }
         });
-
     }
 
     @Override
@@ -96,8 +115,8 @@ public class Numbers extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-                this.finish();
-                return true;
+            this.finish();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -105,12 +124,11 @@ public class Numbers extends AppCompatActivity {
     private void releaseMediaPlayer() {
         if (mMediaPlayer != null) {
             mMediaPlayer.release();
-
-
             mMediaPlayer = null;
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
 
         }
     }
 }
+
 

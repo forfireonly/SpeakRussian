@@ -56,6 +56,33 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".Animals"
+            android:label="@string/category_animals"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Food"
+            android:label="@string/category_food"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Travel"
+            android:label="@string/category_travel"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
