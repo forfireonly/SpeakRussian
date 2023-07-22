@@ -98,7 +98,7 @@ public class Inside extends AppCompatActivity {
 
     private void releaseMediaPlayer() {
 
-        if (mMediaPlayer != null){
+        if (mMediaPlayer != null) {
             mMediaPlayer.release();
             mMediaPlayer = null;
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
@@ -113,7 +113,7 @@ public class Inside extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home){
+        if (item.getItemId() == android.R.id.home) {
             this.finish();
             return true;
         }

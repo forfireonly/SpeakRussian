@@ -60,7 +60,7 @@ public class Animals extends AppCompatActivity {
 
         Toolbar myToolBar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolBar);
-        ActionBar actionBar= getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
         assert actionBar != null;
         actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
@@ -78,7 +78,7 @@ public class Animals extends AppCompatActivity {
 
         ArrayList<Word> animalsArray = new ArrayList<>();
 
-       animalsArray.add(new Word(getString(R.string.dog), R.drawable.dog, R.raw.dog));
+        animalsArray.add(new Word(getString(R.string.dog), R.drawable.dog, R.raw.dog));
         animalsArray.add(new Word(getString(R.string.cat), R.drawable.cat, R.raw.cat));
         animalsArray.add(new Word(getString(R.string.chicken), R.drawable.chicken, R.raw.chicken));
         animalsArray.add(new Word(getString(R.string.fish), R.drawable.fish, R.raw.fish));

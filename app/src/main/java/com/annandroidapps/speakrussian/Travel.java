@@ -77,17 +77,6 @@ public class Travel extends AppCompatActivity {
 
         ArrayList<Word> travelArray = new ArrayList<>();
 
-        /*<string name="car">Car/Mashina</string>
-    <string name="train">Train/Poezd</string>
-    <string name="plane">Plane/Samolet</string>
-    <string name="bus">Bus/Avtobus</string>
-    <string name="road">Road/Dororga</string>
-    <string name="ticket">Ticket/Bilet</string>
-    <string name="luggage">Luggage/Bagazh</string>
-    <string name="city">City/Gorod</string>
-    <string name="hotel">Hotel/Gostinitsa</string>
-    <string name="museum">Museum/Muzey</string>*/
-
         travelArray.add(new Word(getString(R.string.car), R.drawable.car, R.raw.car));
         travelArray.add(new Word(getString(R.string.train), R.drawable.train, R.raw.train));
         travelArray.add(new Word(getString(R.string.plane), R.drawable.plane, R.raw.plane));

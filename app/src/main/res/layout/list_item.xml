@@ -2,33 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
 
-   >
+    >
 
     <ImageView
-        android:contentDescription="@string/picture_of_a_number"
         android:id="@+id/image"
         style="@style/CategoryStyle"
-        android:scaleType="centerCrop"
         android:layout_width="0dp"
         android:layout_weight="1"
-        />
+        android:contentDescription="@string/picture_of_a_number"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/word"
         style="@style/CategoryStyle"
-        android:layout_height="wrap_content"
         android:layout_width="0dp"
-        android:layout_weight="3"
-        />
+        android:layout_height="wrap_content"
+        android:layout_weight="3" />
 
     <ImageView
-        android:contentDescription="@string/play"
-        android:layout_width="wrap_content"
         style="@style/CategoryStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/play_arrow"
-        />
+        android:contentDescription="@string/play" />
 </LinearLayout>

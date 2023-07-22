@@ -3,7 +3,6 @@ package com.annandroidapps.speakrussian;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Context;
@@ -48,8 +47,8 @@ public class Colors extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-                this.finish();
-                return true;
+            this.finish();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -61,7 +60,7 @@ public class Colors extends AppCompatActivity {
 
         Toolbar myToolBar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolBar);
-        ActionBar actionBar= getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
         assert actionBar != null;
         actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);

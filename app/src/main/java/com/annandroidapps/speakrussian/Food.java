@@ -59,7 +59,7 @@ public class Food extends AppCompatActivity {
 
         Toolbar myToolBar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolBar);
-        ActionBar actionBar= getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
         assert actionBar != null;
         actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
@@ -80,7 +80,7 @@ public class Food extends AppCompatActivity {
         foodArray.add(new Word(getString(R.string.breakfast), R.drawable.breakfast, R.raw.breakfast));
         foodArray.add(new Word(getString(R.string.lunch), R.drawable.lunch, R.raw.lunch));
         foodArray.add(new Word(getString(R.string.dinner), R.drawable.dinner, R.raw.dinner));
-        foodArray.add(new Word(getString(R.string.cheese), R.drawable.cheese,R.raw.cheese));
+        foodArray.add(new Word(getString(R.string.cheese), R.drawable.cheese, R.raw.cheese));
         foodArray.add(new Word(getString(R.string.sausage), R.drawable.sausage, R.raw.sausage));
         foodArray.add(new Word(getString(R.string.egg), R.drawable.egg, R.raw.egg));
         foodArray.add(new Word(getString(R.string.tomato), R.drawable.tomato, R.raw.tomato));

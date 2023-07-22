@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
 
     public WordAdapter(@NonNull Activity context, ArrayList<Word> resource) {
-        super(context,0, resource);
+        super(context, 0, resource);
     }
 
     @Override

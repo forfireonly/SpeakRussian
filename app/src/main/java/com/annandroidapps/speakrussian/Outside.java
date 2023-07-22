@@ -35,7 +35,7 @@ public class Outside extends AppCompatActivity {
                 mMediaPlayer.seekTo(0);
             } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                 mMediaPlayer.start();
-            }else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                 releaseMediaPlayer();
             }
 
@@ -49,7 +49,7 @@ public class Outside extends AppCompatActivity {
 
         Toolbar myToolBar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolBar);
-        ActionBar actionBar= getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
         assert actionBar != null;
         actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
@@ -90,7 +90,7 @@ public class Outside extends AppCompatActivity {
             focus = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
             if (focus == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                mMediaPlayer = MediaPlayer.create(Outside.this, word.getmAudio() );
+                mMediaPlayer = MediaPlayer.create(Outside.this, word.getmAudio());
                 mMediaPlayer.start();
 
                 mMediaPlayer.setOnCompletionListener(mOncompletitionListener);
@@ -107,7 +107,7 @@ public class Outside extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == android.R.id.home) {
+        if (item.getItemId() == android.R.id.home) {
             this.finish();
             return true;
         }

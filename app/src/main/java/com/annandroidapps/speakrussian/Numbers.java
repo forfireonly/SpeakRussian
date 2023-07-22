@@ -1,10 +1,8 @@
 package com.annandroidapps.speakrussian;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -47,19 +45,9 @@ public class Numbers extends AppCompatActivity {
         Toolbar myToolBar = findViewById(R.id.toolbar);
 
         setSupportActionBar(myToolBar);
-        /*ActionBar actionBar = getSupportActionBar();
-
-        assert actionBar != null;
-        actionBar.setHomeAsUpIndicator(R.drawable.cathedralblue);
-        actionBar.setDisplayHomeAsUpEnabled(true);*/
 
         Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.cathedralblue);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-       /* getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.cathedralblue);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 

@@ -14,12 +14,13 @@ public class Word {
         mAudio = audio;
     }
 
-    public Word(String word, int  audio) {
+    public Word(String word, int audio) {
         mWord = word;
         mImage = -1;
         mAudio = audio;
 
     }
+
     public String getmWord() {
         return mWord;
     }
@@ -28,5 +29,7 @@ public class Word {
         return mImage;
     }
 
-    public int getmAudio() {return mAudio;}
+    public int getmAudio() {
+        return mAudio;
+    }
 }

@@ -1,6 +1,6 @@
 package com.annandroidapps.speakrussian;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -8,12 +8,10 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        ArrayList <Word> categoriesArray = new ArrayList<>();
+        ArrayList<Word> categoriesArray = new ArrayList<>();
 
         categoriesArray.add(new Word(getString(R.string.category_numbers), R.drawable.numbers, R.raw.numbers));
         categoriesArray.add(new Word(getString(R.string.category_colors), R.drawable.colors, R.raw.colors));
-        categoriesArray.add(new Word(getString(R.string.category_inside), R.drawable.inside,R.raw.inside));
-        categoriesArray.add(new Word(getString(R.string.category_outside), R.drawable.outside,R.raw.outside));
+        categoriesArray.add(new Word(getString(R.string.category_inside), R.drawable.inside, R.raw.inside));
+        categoriesArray.add(new Word(getString(R.string.category_outside), R.drawable.outside, R.raw.outside));
         categoriesArray.add(new Word(getString(R.string.category_phrases), R.drawable.phrases, R.raw.phrases));
-        categoriesArray.add(new Word(getString(R.string.category_animals), R.drawable.animals,R.raw.animals));
+        categoriesArray.add(new Word(getString(R.string.category_animals), R.drawable.animals, R.raw.animals));
         categoriesArray.add(new Word(getString(R.string.category_food), R.drawable.food, R.raw.food));
         categoriesArray.add(new Word(getString(R.string.category_travel), R.drawable.travel, R.raw.travel));
 
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (position == 3) {
                 Intent i = new Intent(MainActivity.this, Outside.class);
                 startActivity(i);
-            } else if (position == 4 ) {
+            } else if (position == 4) {
                 Intent i = new Intent(MainActivity.this, Communication.class);
                 startActivity(i);
             } else if (position == 5) {
@@ -106,44 +104,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-
-
-       /* View numbersView = findViewById(R.id.numbers_layout);
-        numbersView.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Numbers.class);
-            startActivity(i);
-        });
-
-        View colorsView = findViewById(R.id.colors_layout);
-        colorsView.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Colors.class);
-            startActivity(i);
-        });
-
-        View insideView = findViewById(R.id.inside_layout);
-        insideView.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Inside.class);
-            startActivity(i);
-        });
-
-        View outsideView = findViewById(R.id.outside_layout);
-        outsideView.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Outside.class);
-            startActivity(i);
-        });
-
-        View phrasesView = findViewById(R.id.phrases_layout);
-        phrasesView.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Communication.class);
-            startActivity(i);
-        });
-
-        View animalsView = findViewById(R.id.animals_layout);
-        animalsView.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, Animals.class);
-            startActivity(i);
-        });*/
     }
 
     @Override
@@ -151,9 +111,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         releaseMediaPlayer();
     }
-
-
-
     private void releaseMediaPlayer() {
         if (mMediaPlayer != null) {
             mMediaPlayer.release();
