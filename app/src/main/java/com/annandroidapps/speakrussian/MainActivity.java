@@ -2,7 +2,6 @@ package com.annandroidapps.speakrussian;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -11,17 +10,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
+import com.google.android.gms.tasks.Task;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.UpdateAvailability;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     private MediaPlayer mMediaPlayer;
-
     private AudioManager mAudioManager;
-
     private final MediaPlayer.OnCompletionListener mCompletitionListener = mediaPlayer -> releaseMediaPlayer();
-
     private final AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
         public void onAudioFocusChange(int focusChange) {
@@ -32,15 +31,24 @@ public class MainActivity extends AppCompatActivity {
                 mMediaPlayer.start();
             } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                 releaseMediaPlayer();
-
             }
         }
     };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
+// Returns an intent object that you use to check for an update.
+        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+// Checks that the platform will allow the specified type of update.
+        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE) {
+                // Request the update.
+                new UpgradeAvailableDialog().show(getSupportFragmentManager(),UpgradeAvailableDialog.TAG );
+            }
+        });
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
@@ -58,9 +66,7 @@ public class MainActivity extends AppCompatActivity {
         MainWordAdapter itemsAdapter = new MainWordAdapter(this, categoriesArray);
         ListView listView = findViewById(R.id.list_categories);
 
-
         //listView.setBackgroundColor(getResources().getColor(R.color.numbers_background));
-
 
         listView.setAdapter(itemsAdapter);
 
@@ -115,10 +121,8 @@ public class MainActivity extends AppCompatActivity {
         if (mMediaPlayer != null) {
             mMediaPlayer.release();
 
-
             mMediaPlayer = null;
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
-
         }
     }
 }

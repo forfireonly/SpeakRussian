@@ -111,6 +111,11 @@
     <string name="hotel">Hotel/Gostinitsa</string>
     <string name="museum">Museum/Muzey</string>
 
+    <!-- upgrade available dialog -->
+    <string name="upgrade_dialog">Improved app available for download</string>
+    <string name="start_download">DOWNLOAD</string>
+    <string name="cancel">CANCEL</string>
+
 
 
 
