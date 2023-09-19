@@ -1,5 +1,5 @@
 # SpeakRussian
-Simple, intuitive, and seamless experience to start learning Russian language.
+Simple, intuitive, and seamless experience to start learning Russian language by listening to russian speaker.
 ## Salient features:
 1. Works offline.
 2. No advertisements.
